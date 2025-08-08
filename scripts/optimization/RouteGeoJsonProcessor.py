@@ -166,17 +166,3 @@ class RouteGeoJSONProcessor:
             offset_coords.append((new_x, new_y))
 
         return offset_coords
-
-RouteGeoJSONProcessor.decode_polylines_for_routes_to_geojson(
-    "data_files/result_files/pareto_solutions_13_routes.json",
-    "data_files/base_files/origin_destinations_matrix_6.geojson",
-    "data_files/solutions/n13RoutesSolution",
-    "data_files/base_files/nodes6_with_200m_concurrence_assigned_centered.geojson"
-)
-
-RouteGeoJSONProcessor.decode_polylines_for_routes_to_geojson(
-    "data_files/result_files/initial_population_13_routes.json",
-    "data_files/base_files/origin_destinations_matrix_6.geojson",
-    "data_files/initial_population",
-    "data_files/base_files/nodes6_with_200m_concurrence_assigned_centered.geojson"
-)

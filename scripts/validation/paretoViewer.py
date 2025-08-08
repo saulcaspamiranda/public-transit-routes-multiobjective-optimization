@@ -82,9 +82,3 @@ class ParetoViewer:
 
         plt.tight_layout()
         plt.show()
-
-ParetoViewer.plot_pareto_front_from_csv("data_files/result_files/positive_pareto_front_13_routes.csv", obj_indices=(0, 1)) # Plot f1 vs f2
-ParetoViewer.plot_pareto_front_from_csv("data_files/result_files/positive_pareto_front_13_routes.csv", obj_indices=(0, 2)) # f1 vs f3
-ParetoViewer.plot_pareto_front_from_csv("data_files/result_files/positive_pareto_front_13_routes.csv", obj_indices=(1, 2)) # f2 vs f3
-ParetoViewer.plot_pareto_front_3d_from_csv("data_files/result_files/positive_pareto_front_13_routes.csv")
-ParetoViewer.plot_pareto_front_3d_from_csv("data_files/result_files/clustered_pareto_solutions_13_routes.csv")

@@ -4,7 +4,7 @@ from nodeGenerator import NodeGenerator
 from nodeUpdater import NodeUpdater
 from originDestinationMatrixGenerator import OriginDestinationMatrixGenerator
 
-class Main:
+class DataMain:
     
     def getCochabambaDataFromCercadoToShp():
         cochabambaBoundariesGeoJsonFilePath = "data_files/cochabamba_boundaries.geojson"
@@ -85,9 +85,9 @@ class Main:
         )
         generator.run()
         
-Main.generatePopulationGridFromTif(400)
-Main.generateNodes400mApart()
-Main.generatePopulationGridFromTif(1000)
-Main.generateNodes400mApartWith200mApartInRestrictionArea()
-Main.updateNodesWith200mRadiusAssignedPopulation()
-Main.generateOriginDestinationMatrix()
+DataMain.generatePopulationGridFromTif(400)
+DataMain.generateNodes400mApart()
+DataMain.generatePopulationGridFromTif(1000)
+DataMain.generateNodes400mApartWith200mApartInRestrictionArea()
+DataMain.updateNodesWith200mRadiusAssignedPopulation()
+DataMain.generateOriginDestinationMatrix()
