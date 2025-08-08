@@ -1,6 +1,5 @@
 from transitRouteOptimizer import TransitRouteOptimizer
 from routeGeoJsonProcessor import RouteGeoJSONProcessor
-from validation.paretoViewer import ParetoViewer
 
 class Main:
 
@@ -23,7 +22,6 @@ class Main:
         optimizer.run()
 
     def decodeRouteLines():
-        #Decode solutions 
         RouteGeoJSONProcessor.decode_polylines_for_routes_to_geojson(
             "data_files/result_files/pareto_solutions_13_routes.json",
             "data_files/base_files/origin_destinations_matrix_6.geojson",
@@ -31,13 +29,5 @@ class Main:
             "data_files/base_files/nodes6_with_200m_concurrence_assigned_centered.geojson"
         )
 
-    def visualizePareto():
-        ParetoViewer.plot_pareto_front_from_csv("data_files/result_files/positive_pareto_front_13_routes.csv", obj_indices=(0, 1)) # Plot f1 vs f2
-        ParetoViewer.plot_pareto_front_from_csv("data_files/result_files/positive_pareto_front_13_routes.csv", obj_indices=(0, 2)) # f1 vs f3
-        ParetoViewer.plot_pareto_front_from_csv("data_files/result_files/positive_pareto_front_13_routes.csv", obj_indices=(1, 2)) # f2 vs f3
-        ParetoViewer.plot_pareto_front_3d_from_csv("data_files/result_files/positive_pareto_front_13_routes.csv")
-        ParetoViewer.plot_pareto_front_3d_from_csv("data_files/result_files/clustered_pareto_solutions_13_routes.csv")
-
-Main.runOptimizer
-Main.decodeRouteLines
-Main.visualizePareto
+Main.runOptimizer()
+Main.decodeRouteLines()
